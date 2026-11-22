@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tw-address-normalizer"
+version = "0.1.0"
+description = "Normalize Taiwanese postal addresses to one consistent written form"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Jayson LP Chen" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["taiwan", "address", "normalization", "地址", "正規化"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Traditional)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.urls]
+Homepage = "https://github.com/eit/tw-address-normalizer"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "--doctest-modules"
+testpaths = ["src", "tests"]
